@@ -1,0 +1,106 @@
+
+Skip content
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+@roob-cell
+zellwk /
+crud-demo
+Public
+
+Fork your own copy of zellwk/crud-demo
+
+Code
+Issues
+Pull requests 8
+Actions
+Projects
+Security
+
+    Insights
+
+crud-demo/views/index.ejs
+@zellwk
+zellwk Initial commit
+Latest commit f573428 Apr 8, 2020
+History
+1 contributor
+59 lines (51 sloc) 1.53 KB
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Wars Quote App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <h1 data-position="header">May Node and Express be with you.</h1>
+
+    <section data-position="add-quote">
+      <h2>Add quote</h2>
+
+      <form action="/quotes" method="POST">
+        <input type="text" placeholder="name" name="name" />
+        <input type="text" placeholder="quote" name="quote" />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section data-position="update-quote">
+      <div>
+        <h2>Darth Vadar invades!</h2>
+        <p>
+          Replace first Yoda's quote with a quote written by Darth Vadar
+        </p>
+        <button id="update-button">Replace Yoda's quote</button>
+      </div>
+    </section>
+
+    <section data-position="delete-quote">
+      <div>
+        <h2>Remove Darth Vadar!</h2>
+        <p>
+          Delete one Darth Vadar's quote. Does nothing if there are no more
+          Darth Vadar's quote
+        </p>
+        <button id="delete-button">Delete Darth Vadar's quote</button>
+      </div>
+      <div id="message"></div>
+    </section>
+
+    <section data-position="quotes">
+      <h2>Quotes</h2>
+
+      <ul class="quotes">
+        <% for(var i = 0; i < quotes.length; i++) {%>
+        <li class="quote">
+          <span><%= quotes[i].name %></span>:
+          <span><%= quotes[i].quote %></span>
+        </li>
+        <% } %>
+      </ul>
+    </section>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+crud-demo/index.ejs at master · zellwk/crud-demo
